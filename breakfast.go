@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
+	terminal "github.com/buger/goterm"
 	"math/rand"
 	"time"
 )
@@ -19,5 +20,10 @@ func main() {
 		"Bread toast",
 		"Fruits Salad",
 	}
-	fmt.Println("I suggest the breakfast below:\n", breakfast_meals[r.Intn(len(breakfast_meals))])
+	terminal.Clear()
+	terminal.MoveCursor(1, 1)
+	terminal.Println("I suggest the breakfast below:\n\n\n\t\t\t", breakfast_meals[r.Intn(len(breakfast_meals))])
+	terminal.MoveCursor(10, 1)
+	terminal.Flush()
+	//	time.Sleep(time.Second)
 }
